@@ -14,6 +14,7 @@
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-changed": "^3.2.0",
+    "gulp-cheerio": "^1.0.0",
     "gulp-csscomb": "^3.0.8",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-imagemin": "^5.0.3",
@@ -21,6 +22,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^3.0.0",
     "gulp-twig": "^1.2.0",
     "gulp-watch": "^5.0.1",
     "imagemin-pngquant": "^7.0.0"

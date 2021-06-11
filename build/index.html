@@ -80,37 +80,132 @@
           Весь спектр клининговых услуг
         </h2>
         <div class="all-cleaning__wrap">
-          {% set cardList = [
-          {src: 'img/clean1.jpg', retina: 'img/clean1@2x.jpg 2x', alt: 'Элитная
-          недвижимость'},
-          {src: 'img/clean2.jpg', retina: 'img/clean2@2x.jpg 2x', alt:
-          'Административные здания'},
-          {src: 'img/clean3.jpg', retina: 'img/clean3@2x.jpg 2x', alt: 'Квартиры и
-          офисы'},
-          {src: 'img/clean4.jpg', retina: 'img/clean4@2x.jpg 2x', alt: 'Красивое
-          здание'},
-          {src: 'img/clean5.jpg', retina: 'img/clean5@2x.jpg 2x', alt: 'Мытье фасадов'},
-          {src: 'img/clean6.jpg', retina: 'img/clean6@2x.jpg 2x', alt: 'Окна и витражи'},
-          {src: 'img/clean7.jpg', retina: 'img/clean7@2x.jpg 2x', alt: 'Ковры и
-          покрытия'},
-          {src: 'img/clean8.jpg', retina: 'img/clean8@2x.jpg 2x', alt: 'Полы и стены '},
-          ] %}
-          {% for cardItem in cardList %}
+          
+          
           <div class="all-cleaning__item">
             <div class="card">
               <div class="card__wrap">
                 <div class="visual">
                   <div class="visual__cover">
-                    <img src="{{cardItem.src}}" srcset="{{cardItem.retina}}" alt="{{cardItem.alt}}" class="visual__img">
+                    <img src="img/clean1.jpg" srcset="img/clean1@2x.jpg 2x" alt="Элитная
+          недвижимость" class="visual__img">
                   </div>
                 </div>
                 <div class="card__description">
-                  {{ cardItem.text }}
+                  
                 </div>
               </div>
             </div>
           </div>
-          {% endfor %}
+          
+          <div class="all-cleaning__item">
+            <div class="card">
+              <div class="card__wrap">
+                <div class="visual">
+                  <div class="visual__cover">
+                    <img src="img/clean2.jpg" srcset="img/clean2@2x.jpg 2x" alt="Административные здания" class="visual__img">
+                  </div>
+                </div>
+                <div class="card__description">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="all-cleaning__item">
+            <div class="card">
+              <div class="card__wrap">
+                <div class="visual">
+                  <div class="visual__cover">
+                    <img src="img/clean3.jpg" srcset="img/clean3@2x.jpg 2x" alt="Квартиры и
+          офисы" class="visual__img">
+                  </div>
+                </div>
+                <div class="card__description">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="all-cleaning__item">
+            <div class="card">
+              <div class="card__wrap">
+                <div class="visual">
+                  <div class="visual__cover">
+                    <img src="img/clean4.jpg" srcset="img/clean4@2x.jpg 2x" alt="Красивое
+          здание" class="visual__img">
+                  </div>
+                </div>
+                <div class="card__description">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="all-cleaning__item">
+            <div class="card">
+              <div class="card__wrap">
+                <div class="visual">
+                  <div class="visual__cover">
+                    <img src="img/clean5.jpg" srcset="img/clean5@2x.jpg 2x" alt="Мытье фасадов" class="visual__img">
+                  </div>
+                </div>
+                <div class="card__description">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="all-cleaning__item">
+            <div class="card">
+              <div class="card__wrap">
+                <div class="visual">
+                  <div class="visual__cover">
+                    <img src="img/clean6.jpg" srcset="img/clean6@2x.jpg 2x" alt="Окна и витражи" class="visual__img">
+                  </div>
+                </div>
+                <div class="card__description">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="all-cleaning__item">
+            <div class="card">
+              <div class="card__wrap">
+                <div class="visual">
+                  <div class="visual__cover">
+                    <img src="img/clean7.jpg" srcset="img/clean7@2x.jpg 2x" alt="Ковры и
+          покрытия" class="visual__img">
+                  </div>
+                </div>
+                <div class="card__description">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="all-cleaning__item">
+            <div class="card">
+              <div class="card__wrap">
+                <div class="visual">
+                  <div class="visual__cover">
+                    <img src="img/clean8.jpg" srcset="img/clean8@2x.jpg 2x" alt="Полы и стены " class="visual__img">
+                  </div>
+                </div>
+                <div class="card__description">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
         <div class="all-cleaning__button">
           <button class="c-button">Посмотреть цены</button>
@@ -192,49 +287,133 @@
           Наши довольные клиенты
         </h2>
         <div class="clients__wrap">
-          {% set slideCardList = [
-          {text: 'Название клиента', src: 'img/client1.jpg', retina: 'img/client1@2x.jpg 2x', signature: 'Элитная
-          недвижимость', alt: 'Элитная недвижимость'},
-          {text: 'Длинное название клиента', src: 'img/client2.jpg', retina: 'img/client2@2x.jpg 2x',
-          signature:'Обслуживание мероприятий', alt: 'Красивое здание'},
-          {text: 'Обслуживание мероприятий', src: 'img/client3.jpg', retina: 'img/client3@2x.jpg 2x', signature:
-          'Административные здания', alt: 'Красивое здание'},
-          {text: 'Обслуживание мероприятий', src: 'img/client4.jpg', retina: 'img/client4@2x.jpg 2x', signature:
-          'Административные здания', alt: 'Красивое здание'},
-          {text: 'Длинное название клиента', src: 'img/client2.jpg', retina: 'img/client2@2x.jpg 2x', signature:
-          'Обслуживание мероприятий', alt: 'Красивое здание'},
-          {text: 'Название клиента', src: 'img/client1.jpg', retina: 'img/client1@2x.jpg 2x', signature: 'Элитная
-          недвижимость', alt: 'Красивое здание'}
-          ] %}
+          
           <div class="clients__list">
-            {% for slideCardItem in slideCardList %}
+            
             <div class="clients__item">
               <div class="card">
                 <div class="card__wrap">
                   <div class="s-visual">
                     <div class="s-visual__cover">
-                      <img src="{{slideCardItem.src}}" srcset="{{ slideCardItem.retina }}" alt="{{slideCardItem.alt}}"
+                      <img src="img/client1.jpg" srcset="img/client1@2x.jpg 2x" alt="Элитная недвижимость"
                         class="s-visual__img">
                     </div>
                   </div>
                   <div class="card__description">
-                    {{ slideCardItem.text }}
+                    Название клиента
                   </div>
                   <div class="card__text">
-                    {{ slideCardItem.signature }}
+                    Элитная
+          недвижимость
                   </div>
                 </div>
               </div>
             </div>
-            {% endfor %}
+            
+            <div class="clients__item">
+              <div class="card">
+                <div class="card__wrap">
+                  <div class="s-visual">
+                    <div class="s-visual__cover">
+                      <img src="img/client2.jpg" srcset="img/client2@2x.jpg 2x" alt="Красивое здание"
+                        class="s-visual__img">
+                    </div>
+                  </div>
+                  <div class="card__description">
+                    Длинное название клиента
+                  </div>
+                  <div class="card__text">
+                    Обслуживание мероприятий
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="clients__item">
+              <div class="card">
+                <div class="card__wrap">
+                  <div class="s-visual">
+                    <div class="s-visual__cover">
+                      <img src="img/client3.jpg" srcset="img/client3@2x.jpg 2x" alt="Красивое здание"
+                        class="s-visual__img">
+                    </div>
+                  </div>
+                  <div class="card__description">
+                    Обслуживание мероприятий
+                  </div>
+                  <div class="card__text">
+                    Административные здания
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="clients__item">
+              <div class="card">
+                <div class="card__wrap">
+                  <div class="s-visual">
+                    <div class="s-visual__cover">
+                      <img src="img/client4.jpg" srcset="img/client4@2x.jpg 2x" alt="Красивое здание"
+                        class="s-visual__img">
+                    </div>
+                  </div>
+                  <div class="card__description">
+                    Обслуживание мероприятий
+                  </div>
+                  <div class="card__text">
+                    Административные здания
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="clients__item">
+              <div class="card">
+                <div class="card__wrap">
+                  <div class="s-visual">
+                    <div class="s-visual__cover">
+                      <img src="img/client2.jpg" srcset="img/client2@2x.jpg 2x" alt="Красивое здание"
+                        class="s-visual__img">
+                    </div>
+                  </div>
+                  <div class="card__description">
+                    Длинное название клиента
+                  </div>
+                  <div class="card__text">
+                    Обслуживание мероприятий
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="clients__item">
+              <div class="card">
+                <div class="card__wrap">
+                  <div class="s-visual">
+                    <div class="s-visual__cover">
+                      <img src="img/client1.jpg" srcset="img/client1@2x.jpg 2x" alt="Красивое здание"
+                        class="s-visual__img">
+                    </div>
+                  </div>
+                  <div class="card__description">
+                    Название клиента
+                  </div>
+                  <div class="card__text">
+                    Элитная
+          недвижимость
+                  </div>
+                </div>
+              </div>
+            </div>
+            
           </div>
-          <button class="clients__btn clients__btn--prev" aria-label="предыдующий слайд"></button>
+          <!--<button class="clients__btn clients__btn--prev" aria-label="предыдующий слайд"></button>
           <button class="clients__btn clients__btn--next" aria-label="сдедующий слайд"></button>
           <div class="clients__points point">
             <div class="point__wrap">
               <button class="point__btn active" aria-label="первый слайд"></button>
               <button class="point__btn" aria-label="второй слайд"></button>
-              <button class="point__btn" aria-label="третий слайд"></button>
+              <button class="point__btn" aria-label="екутий слайд"></button>
               <button class="point__btn" aria-label="четвёртый слайд"></button>
               <button class="point__btn" aria-label="пятый слайд"></button>
             </div>

@@ -3,7 +3,6 @@ var gulp = require('gulp'),
   prefixer = require('gulp-autoprefixer'),
   sass = require('gulp-sass'),
   sourcemaps = require('gulp-sourcemaps'),
-  nunjucks = require('gulp-nunjucks'),
   rigger = require('gulp-rigger'),
   twig = require("gulp-twig"),
   gcmq = require('gulp-group-css-media-queries'),
@@ -13,6 +12,8 @@ var gulp = require('gulp'),
   browsersync = require("browser-sync"),
   changed = require('gulp-changed'),
   svgSprite = require('gulp-svg-sprite'),
+  svgmin = require('gulp-svgmin'),
+  cheerio = require('gulp-cheerio'),
   del = require("del"),
   reload = browsersync.reload;
 
@@ -22,21 +23,21 @@ var path = {
     js: 'build/js/',
     css: 'build/css/',
     img: 'build/img/',
-    svg: 'build/img/svg'
+    svg: "build/img/svg/"
   },
   src: {
     html: 'src/*.html',
     js: 'src/js/*.js',
     style: 'src/style/*.scss',
     img: 'src/img/**/*.*',
-    svg: 'src/img/svg/*.svg'
+    svg: "src/img/svg/*.svg"
   },
   watch: {
     html: 'src/**/*.html',
     js: 'src/js/**/*.js',
     style: 'src/style/**/*.scss',
-    img: 'src/img/**/*.*',
-    svg: 'src/img/svg/*.svg'
+    img: 'src/img/**/*.*{jpg,jpeg,png,webp,svg}',
+    svg: "src/img/svg/*.svg"
   },
   clean: './build'
 };
@@ -51,10 +52,6 @@ function browserSync(done) {
   done();
 }
 
-function browserSyncReload(done) {
-  browsersync.reload();
-  done();
-}
 
 function clean() {
   return del(path.clean);
@@ -64,7 +61,6 @@ function html() {
   return gulp
     .src(path.src.html)
     .pipe(twig())
-    .pipe(nunjucks.compile())
     .pipe(gulp.dest(path.build.html))
     .pipe(reload({ stream: true }));
 }
@@ -128,21 +124,22 @@ function svg() {
     .pipe(reload({ stream: true }));
 };
 
+
 function watchFiles() {
   gulp.watch([path.watch.style], style);
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.img], image);
-  gulp.watch([path.watch.svg], svg);
+  gulp.watch([path.watch.svg], svg)
 }
 
 gulp.task("image", image);
 gulp.task("style", style);
 gulp.task("js", js);
 gulp.task("html", html);
-gulp.task("clean", clean);
 gulp.task('svg', svg);
+gulp.task("clean", clean);
 
-gulp.task("build", gulp.series(clean, gulp.parallel(style, image, html, js, svg)));
+gulp.task("build", gulp.series(clean, gulp.parallel(style, image, svg, html, js)));
 
 gulp.task("watch", gulp.parallel(watchFiles, browserSync));
